@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <!-- <groupId>com.bizgenco.backend</groupId>
 
-  <groupId>com.bizgenco.backend</groupId>
+  <version>0.0.1-SNAPSHOT</version> -->
   <artifactId>data</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>data</name>
@@ -14,6 +14,11 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <parent>
+  	<groupId>com.bizgenco.backend</groupId>
+  	<artifactId>backenderp</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  </parent>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -25,7 +30,7 @@
     	<groupId>org.hibernate</groupId>
     	<artifactId>hibernate-core</artifactId>
     	<version>5.2.12.Final</version>
-    	<scope>runtime</scope>
+
     </dependency>
     <dependency>
     	<groupId>org.hibernate.javax.persistence</groupId>
@@ -36,7 +41,8 @@
     	<groupId>mysql</groupId>
     	<artifactId>mysql-connector-java</artifactId>
     	<version>6.0.6</version>
-    	<scope>runtime</scope>
+
     </dependency>
   </dependencies>
+
 </project>

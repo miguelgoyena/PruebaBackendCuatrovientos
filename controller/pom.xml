@@ -2,9 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.bizgenco.backend</groupId>
   <artifactId>controller</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>controller</name>
@@ -44,11 +42,28 @@
   </dependencies>
   <build>
   	<plugins>
+  		<!-- https://docs.spring.io/spring-boot/docs/current/maven-plugin/usage.html  -->
   		<plugin>
   			<groupId>org.springframework.boot</groupId>
   			<artifactId>spring-boot-maven-plugin</artifactId>
   			<version>1.5.9.RELEASE</version>
+  			<configuration>
+		        <mainClass>com.bizgenco.backend.controller.App</mainClass>
+		        <layout>JAR</layout>
+		      </configuration>
+		      <executions>
+		        <execution>
+		          <goals>
+		            <goal>repackage</goal>
+		          </goals>
+		        </execution>
+		      </executions>
   		</plugin>
   	</plugins>
   </build>
+  <parent>
+  	<groupId>com.bizgenco.backend</groupId>
+  	<artifactId>backenderp</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  </parent>
 </project>
