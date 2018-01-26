@@ -7,7 +7,7 @@
   <name>Proyecto Backend para un ERP</name>
   <description>Proyecto Backend para un ERP</description>
   <modules>
-   	<module>../../git/backend/data</module>
-  	<module>../../git/backend/controller</module>
+   	<module>../data</module>
+  	<module>../controller</module>
   </modules>
 </project>
